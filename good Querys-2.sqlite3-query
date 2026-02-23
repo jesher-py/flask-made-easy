@@ -1,0 +1,13 @@
+-- database: c:\Users\legen\OneDrive\Desktop\flask made easy\database.db
+
+-- all bikes
+SELECT * FROM cars;
+
+-- all bikes and maker
+select makers.name, cars.model from cars
+join makers on cars.maker_id = makers.id;
+
+-- bikes of one maker
+select cars.model from cars
+join makers on cars.maker_id = makers.id
+where makers.name = 'ferrari';
