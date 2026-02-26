@@ -11,3 +11,12 @@ join makers on cars.maker_id = makers.id;
 select cars.model from cars
 join makers on cars.maker_id = makers.id
 where makers.name = 'ferrari';
+
+--just id, model, maker and imageURL
+select cars.carID, cars.model, makers.name, cars.imgURL
+from cars
+join makers on cars.makerID = makers.makerID;
+
+--just one car based on id
+SELECT * FROM cars join makers on makers.makerID = cars.makerID
+WHERE cars.carID = 2;
